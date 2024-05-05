@@ -1,6 +1,7 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const employeeArray = [];
+// creates the main array that will be used by all the subsequent functions
 
 
 //  // Collect employee data
@@ -12,18 +13,20 @@ while (addEmp) {
   let lastName = prompt ("Enter last name");
   let salary = parseInt(prompt("Enter salary"));
     if (firstName !== "" && lastName !== "" && isNaN(salary) === false){
-      // checks to make sure there was data entered and its the right type
+      // checks to make sure there was data entered and its the right type of input
   let empArray = {
     firstName: firstName,
     lastName: lastName,
     salary: salary,
   };
-employeeArray.push(empArray)
+employeeArray.push(empArray) 
+// pushes the newly created array in the function to the existing one
 addEmp = confirm("Add another employee?")}
   else{
     addEmp = false
     alert("Invalid input, please fill out all forms correctly")
   }
+  // confirming/denying that the user wants to add a new employee, and making sure the salary is filled out as a number
   employeeArray.sort;
   return employeeArray;}
   addEmployees();}
@@ -35,8 +38,10 @@ addEmp = confirm("Add another employee?")}
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   const sal = employeeArray.map(employeeArray =>  employeeArray.salary);
+  // making sure to only look at the salary portion of the array
   const sum = sal.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
   const average = sum / sal.length;
+  // divides the sum of the salaries by the amount of employees
 
   console.log('The average salary between our', (employeeArray.length), 'employees is: $',average.toFixed(2))
   // // TODO: Calculate and display the average salary
