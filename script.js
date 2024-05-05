@@ -8,8 +8,8 @@ const collectEmployees = function() {
   let addEmp = true;
 while (addEmp) {
   const addEmployees = function(){
-  let firstName = prompt ("Enter first name", "John");
-  let lastName = prompt ("Enter last name", "Doe");
+  let firstName = prompt ("Enter first name");
+  let lastName = prompt ("Enter last name");
   let salary = parseInt(prompt("Enter salary"));
     if (firstName !== "" && lastName !== "" && isNaN(salary) === false){
       // checks to make sure there was data entered and its the right type
@@ -24,6 +24,7 @@ addEmp = confirm("Add another employee?")}
     addEmp = false
     alert("Invalid input, please fill out all forms correctly")
   }
+  employeeArray.sort;
   return employeeArray;}
   addEmployees();}
   return employeeArray;
@@ -43,6 +44,9 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+  const randEmp = Math.floor(Math.random() * employeeArray.length);
+  const random = employeeArray[randEmp]
+  console.log('Congratulations to', random.firstName, random.lastName, 'our random drawing winner!');
   // TODO: Select and display a random employee
 }
 
