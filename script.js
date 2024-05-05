@@ -12,6 +12,7 @@ while (addEmp) {
   let lastName = prompt ("Enter last name", "Doe");
   let salary = parseInt(prompt("Enter salary"));
     if (firstName !== "" && lastName !== "" && isNaN(salary) === false){
+      // checks to make sure there was data entered and its the right type
   let empArray = {
     firstName: firstName,
     lastName: lastName,
@@ -32,7 +33,12 @@ addEmp = confirm("Add another employee?")}
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  const sal = employeeArray.map(employeeArray =>  employeeArray.salary);
+  const sum = sal.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+  const average = sum / sal.length;
+
+  console.log('The average salary between our', (employeeArray.length), 'employees is: $',average.toFixed(2))
+  // // TODO: Calculate and display the average salary
 }
 
 // Select a random employee
